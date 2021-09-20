@@ -25,8 +25,8 @@ console.log(check)
 		amount: '10',
          
 		bkashScriptURL: 'https://scripts.sandbox.bka.sh/versions/1.2.0-beta/checkout/bKash-checkout-sandbox.js',
-		createPaymentURL: 'http://localhost:5000/createRequest',
-		executePaymentURL: 'http://localhost:5000/executeRequest',
+		createPaymentURL: 'https://pay-server.herokuapp.com/createRequest',
+		executePaymentURL: 'https://pay-server.herokuapp.com/executeRequest',
 		additionalHeaders: {
 			Authorization: 'Bearer YOUR_TOKEN',
 		},
