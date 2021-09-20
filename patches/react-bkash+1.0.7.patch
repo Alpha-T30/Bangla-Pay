@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-bkash/dist/index.js b/node_modules/react-bkash/dist/index.js
+index 4e8ca46..c211f8b 100644
+--- a/node_modules/react-bkash/dist/index.js
++++ b/node_modules/react-bkash/dist/index.js
+@@ -117,7 +117,7 @@ var initBkash = function (amount, createPaymentURL, executePaymentURL, onSuccess
+                 });
+             });
+         },
+-        onClose: function () { return callBack(false); },
++        onClose: function () { return onClose() },
+     };
+     bKash.init(config);
+ };
