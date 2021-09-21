@@ -1,0 +1,24 @@
+.home{
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    overflow: scroll;
+      .container{
+      
+        width: inherit;
+       height: calc(100vh - 50px);
+        
+        .firstSection{
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 20px;
+           
+
+        }
+
+        .sectiontwo{
+          width: 100%;
+        }
+         
+    }
+}

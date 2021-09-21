@@ -1,0 +1,25 @@
+.bkash{
+     
+    border: 3px solid black;
+    
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 130px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:  #ffffff; 
+    font-weight: bold;
+     
+    font-size: 17px;
+    text-align: center;
+    img{
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+    
+}

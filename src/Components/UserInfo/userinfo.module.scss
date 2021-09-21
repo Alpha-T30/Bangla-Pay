@@ -1,0 +1,23 @@
+.userinfo{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+padding: 10px;
+flex: 2;
+margin: 5px;
+max-width: 100%;
+    
+    .wrapper{
+        padding: 10px;
+         
+        
+        .item{
+            margin: 5px 0 ;
+            font-weight: bold;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+    }
+}
