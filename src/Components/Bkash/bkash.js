@@ -11,11 +11,13 @@ const Bkash: FC = () => {
   console.log(check);
 
   const handleSuccess: SuccessFunction = (data) => {
+    alert("Payment Successfull") ; 
      history.push("/")
   };
 
   const handleClose = () => {
-    window.location.reload();
+    history.push("/")
+
   };
 
   const config: IComponentConfig = {

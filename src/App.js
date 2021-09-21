@@ -1,13 +1,19 @@
 import Style from "./app.module.scss";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Login from "./Pages/Login/Login";
 import Home from "./Pages/Home/Home";
 import Pay from "./Pages/PaymentMethods/Pay";
+// import { useDispatch, useSelector } from "react-redux";
+
+ 
 
 import { BrowserRouter as Router, Switch, Route, Link , Redirect } from "react-router-dom";
+import { AuthContext } from "./ContextApi/UserContaxt/AuthContext";
 
 function App() {
-  const user = true ; 
+  const {user} = useContext(AuthContext)
+  console.log(user)
+  
   return (
     <Router>
       <div className={Style.App}>
