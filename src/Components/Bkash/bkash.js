@@ -1,15 +1,17 @@
 import BkashButton, { IComponentConfig, SuccessFunction } from "react-bkash";
 import React, { CSSProperties, FC } from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState  } from "react";
 import Style from "./bkash.module.scss";
+import { useHistory } from 'react-router-dom';
+
 
 const Bkash: FC = () => {
   const [check, setCheck] = useState("");
-
+  const history = useHistory()
   console.log(check);
 
   const handleSuccess: SuccessFunction = (data) => {
-    window.alert("success");
+     history.push("/")
   };
 
   const handleClose = () => {
