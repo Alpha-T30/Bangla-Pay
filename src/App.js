@@ -11,8 +11,9 @@ import { BrowserRouter as Router, Switch, Route, Link , Redirect } from "react-r
 import { AuthContext } from "./ContextApi/UserContaxt/AuthContext";
 
 function App() {
-  const {user} = useContext(AuthContext)
-  console.log(user)
+  // const {user} = useContext(AuthContext)
+  const user = true ; 
+  // console.log(user)
   
   return (
     <Router>

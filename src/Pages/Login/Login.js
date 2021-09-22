@@ -14,8 +14,8 @@ export default function Login() {
 
   // const dispatch = useDispatch();
 
-  const { sender:dispatch ,isFeching} = useContext(AuthContext);
-
+  const { sender:dispatch ,isFeching, error} = useContext(AuthContext);
+console.log(error)
   const formRef = useRef();
   const handleSubmit=(e)=>{
     e.preventDefault() ; 

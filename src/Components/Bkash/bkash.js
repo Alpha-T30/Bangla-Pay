@@ -6,9 +6,9 @@ import { useHistory } from 'react-router-dom';
 
 
 const Bkash: FC = () => {
-  const [check, setCheck] = useState("");
+   
   const history = useHistory()
-  console.log(check);
+ 
 
   const handleSuccess: SuccessFunction = (data) => {
     alert("Payment Successfull") ; 
@@ -16,7 +16,7 @@ const Bkash: FC = () => {
   };
 
   const handleClose = () => {
-    history.push("/")
+     window.location.reload()
 
   };
 
