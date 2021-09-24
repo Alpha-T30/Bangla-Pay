@@ -7,6 +7,9 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
+    background-image: url("https://image.freepik.com/free-vector/futuristic-technology-background_52683-35442.jpg");
+    background-repeat: no-repeat;
+   background-size: cover;
     .wrapper{
         display: flex;
         align-items: center;
@@ -65,7 +68,7 @@
             span{
                 a{
                     text-decoration: none;
-                    color: black;
+                    color: crimson;
                     font-weight: bold;
                     font-size: 16;
                 }
@@ -83,7 +86,7 @@
     width: 100%;
     height: 100%;
     flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.247);
+    background-color: #FFB319;
     p{
         margin-bottom: 20px;
         font-weight: bold;
@@ -91,6 +94,12 @@
         font-size: 20px;
         position: absolute;
         top: 20vh;
+    }
+    span{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 18px;
     }
     button{
         margin-top: 40px;
@@ -100,6 +109,7 @@
         height: 30px;
         position: absolute;
         bottom: 10%;
+        background-color:  #3DB2FF;
     }
 
 }

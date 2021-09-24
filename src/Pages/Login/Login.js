@@ -1,10 +1,11 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import Style from "./login.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUser } from "../../redux/apiCalls";
 import { AuthContext } from "../../ContextApi/UserContaxt/AuthContext";
 import { login } from "../../ContextApi/UserContaxt/apiCalls";
 import CircularProgress from '@mui/material/CircularProgress';
+import axios from "axios";
 
 export default function Login() {
 
@@ -14,9 +15,25 @@ export default function Login() {
 
 
   // const dispatch = useDispatch();
+const[isServerOk , setServerStatus]= useState(true); 
+useEffect(()=>{
+  const check = async ()=>{
+    try {
+      const  res = await axios.get("http://localhost:5000/check")
+      
+      
+    } catch (error) {
+      setServerStatus(false)
+      
+    }
+
+  }
+  check()
+},[])
 
   const { sender:dispatch ,isFetching, error} = useContext(AuthContext);
-console.log(isFetching)
+  console.log("the error:",error)
+ 
   const formRef = useRef();
   const handleSubmit=(e)=>{
     e.preventDefault() ; 
@@ -28,8 +45,20 @@ console.log(isFetching)
   }
  
   return (
-    !isFetching?
-    <div className={Style.login}>
+    !isServerOk?
+    (<>
+
+      <div className={Style.isFetching}>
+      <span>Server Down Contact with</span>
+        <a href="banglapay.com">Bangla Pay</a> 
+        <span>Or</span>
+        <button onClick={()=>window.location.reload()}>Try Again</button>
+        </div>
+       </> ):
+    (
+
+      (!isFetching && !error)?
+      <div className={Style.login}>
       <div className={Style.wrapper}>
         <img src="/Images/logo1.jpg" alt="" />
         
@@ -38,12 +67,14 @@ console.log(isFetching)
           <input placeholder="Password" type="password" name="password" />
           <button  type='submit'>Log In</button>
 
+       
+
         </form>
         <div className={Style.promotion}>
             <span>Powered By <a href="https://www.facebook.com">Bangla Pay</a></span>
         </div>
       </div>
-    </div> :  (
+    </div> : (isFetching && !error)?(
       <div className={Style.isFetching}>
       
       <div class="divLoader">
@@ -54,7 +85,12 @@ console.log(isFetching)
       <button onClick={()=>window.location.reload()}>Try Again</button>
     </div>
       </div>
-    )
+    ): (!isFetching && error) && (<div className={Style.isFetching}> <span>Wrong Password</span>
+      <button onClick={()=>window.location.reload()}>Try Again</button>
+
+    </div>)
   )  
+  
+  )
   
 }
