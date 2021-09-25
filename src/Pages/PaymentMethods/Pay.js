@@ -8,11 +8,9 @@ import { useLocation } from "react-router-dom";
 export default function Pay() {
 
     const location = useLocation();
-    console.log(location)
+ 
 
-    // useEffect(() => {
-         
-    // }, [location]);
+   
 
     return (
         <div className={Style.pay}>

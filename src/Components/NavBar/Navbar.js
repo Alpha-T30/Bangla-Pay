@@ -1,7 +1,6 @@
 import Style from './navbar.module.scss' ; 
 
 import{ ArrowBack ,ExitToApp } from '@mui/icons-material';
-// import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { useHistory } from 'react-router';
 import { AuthContext } from '../../ContextApi/UserContaxt/AuthContext';
 import { useContext } from 'react';
@@ -12,7 +11,7 @@ export default function Navbar({forPayment}) {
     const{sender:dispatch} =useContext(AuthContext)
 
     const logout = ()=>{
-            // e.preventDefault()
+             
              dispatch(logOut())
             
     }

@@ -1,11 +1,10 @@
 import BkashButton, { IComponentConfig, SuccessFunction } from "react-bkash";
-import React, { CSSProperties, FC } from "react";
+import React, { FC } from "react";
 import { useEffect, useState } from "react";
 import Style from "./bkash.module.scss";
 import { useHistory } from "react-router-dom";
 
 import CircularProgress from "@mui/material/CircularProgress";
-import Delayed from "./wait";
 import axios from "axios";
 
 const Bkash: FC = () => {
@@ -78,15 +77,4 @@ const Bkash: FC = () => {
 
 export default Bkash;
 
-// const buttonStyle: CSSProperties = {
-// 	minWidth: '170px',
-// 	height: '38px',
-// 	fontSize: '0.875rem',
-// 	fontWeight: 500,
-// 	lineHeight: 1.5,
-// 	color: '#fff',
-// 	padding: '0.375rem 0.75rem',
-// 	textTransform: 'uppercase',
-// 	backgroundColor: '#e2136e',
-// 	border: '1px solid #e2136e',
-// };
+ 

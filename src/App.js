@@ -1,9 +1,8 @@
 import Style from "./app.module.scss";
-import { useState, useEffect, useContext } from "react";
+import {   useContext } from "react";
 import Login from "./Pages/Login/Login";
 import Home from "./Pages/Home/Home";
 import Pay from "./Pages/PaymentMethods/Pay";
-// import { useDispatch, useSelector } from "react-redux";
 
  
 
@@ -12,8 +11,8 @@ import { AuthContext } from "./ContextApi/UserContaxt/AuthContext";
 
 function App() {
   const {user} = useContext(AuthContext)
-  // const user = true ; 
-  console.log(user)
+  
+ 
   
   return (
     <Router>
