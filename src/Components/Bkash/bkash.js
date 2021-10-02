@@ -15,7 +15,7 @@ const Bkash: FC = () => {
   useEffect(() => {
     const loadTest = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/loading");
+        const res = await axios.get("https://pay-server.herokuapp.com/loading");
       } catch (error) {
         setServertest(true);
       }
@@ -42,8 +42,8 @@ const Bkash: FC = () => {
 
     bkashScriptURL:
       "https://scripts.sandbox.bka.sh/versions/1.2.0-beta/checkout/bKash-checkout-sandbox.js",
-    createPaymentURL: "http://localhost:8000/createRequest",
-    executePaymentURL: "http://localhost:8000/executeRequest",
+    createPaymentURL: "https://pay-server.herokuapp.com/createRequest",
+    executePaymentURL: "https://pay-server.herokuapp.com/executeRequest",
     additionalHeaders: {
       Authorization: "Bearer YOUR_TOKEN",
     },

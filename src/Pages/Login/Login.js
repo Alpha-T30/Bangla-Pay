@@ -11,7 +11,7 @@ const[isServerOk , setServerStatus]= useState(true);
 useEffect(()=>{
   const check = async ()=>{
     try {
-      const  res = await axios.get("http://localhost:5000/check")
+      const  res = await axios.get("https://fakeapii.herokuapp.com/")
       
       
     } catch (error) {
