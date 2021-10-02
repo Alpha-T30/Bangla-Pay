@@ -26,7 +26,7 @@ const Bkash: FC = () => {
   const handleSuccess: SuccessFunction = (data) => {
     setSpinner(false);
     alert("Payment Successfull");
-    history.push("/");
+     window.location.reload() ; 
   };
 
   const handleClose = () => {
